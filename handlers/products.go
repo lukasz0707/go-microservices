@@ -16,6 +16,7 @@ func NewProducts(l *log.Logger) *Products {
 }
 
 func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
+	//catch get methods
 	if r.Method == http.MethodGet {
 		p.GetProducts(rw, r)
 		return
